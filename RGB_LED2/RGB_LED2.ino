@@ -1,5 +1,3 @@
-//www.elegoo.com
-//2016.12.8
 
 // Define Pins
 #define BLUE 3
@@ -33,6 +31,7 @@ void loop()
   int blueValue = 0;
 
   // Increase green color to make orangeish yellow
+  //to change GREEN value max and min, adjust all 40 and 80 values
   for(int i = 0; i < 40; i += 1) 
   {
     greenValue += 1;
@@ -53,4 +52,6 @@ void loop()
     analogWrite(GREEN, greenValue);
     delay(delayTime);
   }
+  //this can be copied one more time and expanded to include the BLUE value;
+  //However, this code does not use the blue part of the LED
 }
